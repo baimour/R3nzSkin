@@ -17,10 +17,13 @@ jobs:
       shell: cmd
       run: msbuild R3nzSkin/R3nzSkin.vcxproj /p:Platform=x64 /p:Configuration=${{ matrix.configuration }}
 
+    - name: Debug - Find DLLs
+      shell: cmd
+      run: dir /s /b *.dll
+
     - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
+      if: always() # 即使没找到文件也继续运行
       with:
         name: R3nzSkin-${{ matrix.configuration }}-x64
-        path: |
-          a/R3nzSkin/R3nzSkin/R3nzSkin/Releases/${{ matrix.configuration }}/*.dll
-          a/R3nzSkin/R3nzSkin/R3nzSkin/Releases/${{ matrix.configuration }}/*.exe
+        path: R3nzSkin/x64/${{ matrix.configuration }}/*.dll
