@@ -21,4 +21,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: R3nzSkin/${{ matrix.configuration }}
-        path: D:/a/R3nzSkin/R3nzSkin/R3nzSkin/Release/${{ matrix.configuration }}/*
+        path: ${{ github.workspace }}/R3nzSkin/Release/${{ matrix.configuration }}/*
