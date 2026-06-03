@@ -20,7 +20,7 @@ jobs:
     - name: Debug - List Output Files
       shell: cmd
       run: |
-      dir R3nzSkin\Release\${{ matrix.configuration }}
+          dir R3nzSkin\Release\${{ matrix.configuration }}
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
