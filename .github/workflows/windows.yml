@@ -22,5 +22,5 @@ jobs:
       with:
         name: R3nzSkin-${{ matrix.configuration }}-x64
         path: |
-          a/R3nzSkin/R3nzSkin/R3nzSkin/bin/x64/${{ matrix.configuration }}/*.dll
-          a/R3nzSkin/R3nzSkin/R3nzSkin/bin/x64/${{ matrix.configuration }}/*.exe
+          a/R3nzSkin/R3nzSkin/R3nzSkin/Releases/bin/x64/${{ matrix.configuration }}/*.dll
+          a/R3nzSkin/R3nzSkin/R3nzSkin/Releases/x64/${{ matrix.configuration }}/*.exe
