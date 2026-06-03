@@ -18,7 +18,7 @@ jobs:
       run: msbuild R3nzSkin/R3nzSkin.vcxproj /p:Platform=x64 /p:Configuration=${{ matrix.configuration }}
 
     - name: Upload Build Artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: D:/a/R3nzSkin/R3nzSkin/R3nzSkin/${{ matrix.configuration }}/*.exe
         path: D:/a/R3nzSkin/R3nzSkin/R3nzSkin/${{ matrix.configuration }}/*.dll
