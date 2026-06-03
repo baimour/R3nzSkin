@@ -20,5 +20,5 @@ jobs:
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: Release/${{ matrix.configuration }}
+        name: R3nzSkin/${{ matrix.configuration }}
         path: D:/a/R3nzSkin/R3nzSkin/R3nzSkin/Release/${{ matrix.configuration }}/*
