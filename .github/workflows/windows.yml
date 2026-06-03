@@ -16,11 +16,6 @@ jobs:
     - name: Build 
       shell: cmd
       run: msbuild R3nzSkin/R3nzSkin.vcxproj /p:Platform=x64 /p:Configuration=${{ matrix.configuration }}
-
-    - name: Find Output Files
-      shell: cmd
-      run: |
-          dir /s /b ${{ matrix.configuration }}\*
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
