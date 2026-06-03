@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v4 
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
-    - name: Build
+    - name: Build 
       shell: cmd
       run: msbuild R3nzSkin/R3nzSkin.vcxproj /p:Platform=x64 /p:Configuration=${{ matrix.configuration }}
 
@@ -22,5 +22,5 @@ jobs:
       with:
         name: R3nzSkin-${{ matrix.configuration }}-x64
         path: |
-          a/R3nzSkin/R3nzSkin/R3nzSkin/Releases/bin/x64/${{ matrix.configuration }}/*.dll
-          a/R3nzSkin/R3nzSkin/R3nzSkin/Releases/x64/${{ matrix.configuration }}/*.exe
+          a/R3nzSkin/R3nzSkin/R3nzSkin/Releases/${{ matrix.configuration }}/*.dll
+          a/R3nzSkin/R3nzSkin/R3nzSkin/Releases/${{ matrix.configuration }}/*.exe
