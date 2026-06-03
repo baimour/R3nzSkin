@@ -1,9 +1,6 @@
 name: Windows
 on: [push, pull_request]
 
-env:
-FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -21,7 +18,7 @@ jobs:
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
-      with:
+      with: 
         name: R3nzSkin
         path: |
             ${{ github.workspace }}/Release/${{ matrix.configuration }}/*.dll
