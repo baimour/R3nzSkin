@@ -20,10 +20,10 @@ jobs:
     - name: Find Output Files
       shell: cmd
       run: |
-          dir /s /b Release\${{ matrix.configuration }}\*
+          dir /s /b D:\a\R3nzSkin\R3nzSkin\R3nzSkin\Release\${{ matrix.configuration }}\*
     
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: R3nzSkin/${{ matrix.configuration }}
-        path: Release/${{ matrix.configuration }}/*
+        name: Release\${{ matrix.configuration }}
+        path: D:\a\R3nzSkin\R3nzSkin\R3nzSkin\Release\Release\${{ matrix.configuration }}\*
