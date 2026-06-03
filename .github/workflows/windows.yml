@@ -1,5 +1,4 @@
 name: Windows
-
 on: [push, pull_request]
 
 jobs:
@@ -10,7 +9,7 @@ jobs:
         os: [windows-2022]
         configuration: [RiotGamesServers, ChinaServer]
     steps:
-    - uses: actions/checkout@v4 
+    - uses: actions/checkout@latest
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
     - name: Build 
