@@ -10,9 +10,17 @@ jobs:
         os: [windows-2022]
         configuration: [RiotGamesServers, ChinaServer]
     steps:
-    - uses: actions/checkout@v3.5.2
+    - uses: actions/checkout@v4
     - name: Add msbuild to PATH
-      uses: microsoft/setup-msbuild@v1.3.1
+      uses: microsoft/setup-msbuild@v2
     - name: Build
       shell: cmd
       run: msbuild R3nzSkin/R3nzSkin.vcxproj /p:Platform=x64 /p:Configuration=${{ matrix.configuration }}
+
+      - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: R3nzSkin-${{ matrix.configuration }}-x64
+        path: |
+          a/R3nzSkin/R3nzSkin/R3nzSkin/bin/x64/${{ matrix.configuration }}/*.dll
+          a/R3nzSkin/R3nzSkin/R3nzSkin/bin/x64/${{ matrix.configuration }}/*.exe
