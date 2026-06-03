@@ -22,5 +22,5 @@ jobs:
       with:
         name: R3nzSkin
         path: |
-            ${{ github.workspace }}/R3nzSkin/Release/${{ matrix.configuration }}/*.dll
-            ${{ github.workspace }}/R3nzSkin/Release/${{ matrix.configuration }}/*.exe
+            ${{ github.workspace }}/Release/${{ matrix.configuration }}/*.dll
+            ${{ github.workspace }}/Release/${{ matrix.configuration }}/*.exe
