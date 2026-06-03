@@ -20,5 +20,5 @@ jobs:
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: D:/a/R3nzSkin/R3nzSkin/R3nzSkin/${{ matrix.configuration }}/*.exe
-        path: D:/a/R3nzSkin/R3nzSkin/R3nzSkin/${{ matrix.configuration }}/*.dll
+        name: D:/a/R3nzSkin/R3nzSkin/R3nzSkin/Release/${{ matrix.configuration }}/*.exe
+        path: D:/a/R3nzSkin/R3nzSkin/R3nzSkin/Release/${{ matrix.configuration }}/*.dll
